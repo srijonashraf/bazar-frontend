@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <section class="header" id="headerSection">
+
+        <form class="mx-4 py-3">
+            <div class="header-left">
+                <div class="searchbar-top">
+                    <input class="text-sm pe-5 ps-2" type="text" placeholder="Search for item or brands" />
+                </div>
+            </div>
+            <div class="header-right">
+                <a href><i class="fa-solid fa-cart-shopping px-3 text-muted"></i></a>
+                <button onclick="loginbtn()" class="login-button text-sm" id="">
+                    Login
+                </button>
+                <button onclick="regbtn()" class="login-button text-sm" id="">
+                    Register
+                </button>
+
+                <div id="login" class="modal">
+                    <form class="modal-content animate" action="" method="post">
+                        <div class="container">
+                            <label class="text-center"><span style="font-size: 1.25rem"><b>Login</b></span>
+                                <input id="login_uname" class="mt-4" type="text" placeholder="Username" required />
+                                <input id="login_pass" type="password" placeholder="Password" required />
+                                <button onclick="loginfunc()" class="main-login-button" id="login" type="submit">
+                                    Login
+                                </button>
+
+                                <button type="button" class="cancelbtn" onclick="cancelbtn()">
+                                    Cancel
+                                </button>
+                                <span class="" style="font-weight: 400">New User? </span>
+                                <button style="
+                                  border: none;
+                                  background-color: white;
+                                  font-weight: bold;
+                                " onclick="regbtn()">
+                                    Register Now
+                                </button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="register" class="modal">
+                    <div class="container">
+                        <label class="text-center"><span style="font-size: 1.25rem"><b>Sign Up</b></span>
+                            <input id="reg_fname" class="mt-4" type="text" placeholder="First Name" required />
+                            <input id="reg_lname" type="text" placeholder="Last Name" required />
+                            <input id="reg_uname" type="text" placeholder="Username" required />
+                            <input id="reg_pass" type="password" placeholder="Password" required />
+                            <button onclick="regfunc()" class="main-login-button" id="register" type="submit">
+                                Register
+                            </button>
+                        </label>
+                        <button type="button" onclick="cancelbtn()" class="cancelbtn">
+                            Cancel
+                        </button>
+                        <span class="" style="font-weight: 400">Already Registered?
+                        </span>
+                        <button style="
+                              border: none;
+                              background-color: white;
+                              font-weight: bold;
+                            " onclick="loginbtn()">
+                            Login Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
